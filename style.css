@@ -1,10 +1,13 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
+  background: #1a1a1a;
 }
 
 #map {
   height: 100vh;
+  width: 100%;
+  background: #2a2a2a;
 }
 
 /* Panel */
@@ -13,62 +16,312 @@ body {
   top: 10px;
   left: 10px;
   z-index: 1000;
-  background: #1e1e1e;
+  background: rgba(30, 30, 30, 0.95);
   color: white;
   padding: 15px;
   border-radius: 12px;
-  width: 230px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  width: 280px;
+  max-width: calc(100% - 40px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-.panel input {
+.panel h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel input, .panel select {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
   border: none;
+  box-sizing: border-box;
+  background: #3a3a3a;
+  color: white;
+  font-size: 14px;
 }
 
-/* Filter */
+.panel select option {
+  background: #2a2a2a;
+}
+
+/* Filter Bereich */
+.filters {
+  margin: 15px 0;
+  padding: 10px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+}
+
+.filters h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
 .filters label {
-  display: block;
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filters input {
+  width: auto;
+  margin-right: 10px;
+  margin-bottom: 0;
 }
 
 /* Legende */
 .legend {
-  margin-top: 10px;
-  font-size: 13px;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #444;
 }
 
-.box {
+.legend h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.legend-color {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 6px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-.red { background: red; }
-.blue { background: blue; }
-.green { background: green; }
+.legend-color.sammler { background: #ff6b6b; }
+.legend-color.verarbeiter { background: #4ecdc4; }
+.legend-color.anwesen { background: #45b7d1; }
+.legend-color.hersteller { background: #96ceb4; }
 
 /* Buttons */
 button {
   width: 100%;
-  margin-top: 5px;
-  padding: 8px;
+  margin-top: 8px;
+  padding: 10px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #3a3a3a;
   color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+button:hover {
+  background: #555;
+  transform: translateY(-1px);
+}
+
+button.primary {
+  background: #4CAF50;
+}
+
+button.primary:hover {
+  background: #45a049;
+}
+
+button.danger {
+  background: #f44336;
+}
+
+button.danger:hover {
+  background: #da190b;
+}
+
+button.warning {
+  background: #ff9800;
+}
+
+button.warning:hover {
+  background: #f57c00;
+}
+
+/* Login Panel */
+.login-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 16px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border: 1px solid #444;
+}
+
+.login-panel h3 {
+  margin: 0 0 20px 0;
+  color: #ff9800;
+}
+
+.login-panel input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #2a2a2a;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* Admin Badge */
+.admin-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background: #ff9800;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.admin-badge button {
+  width: auto;
+  margin: 0;
+  padding: 4px 12px;
+  background: rgba(0,0,0,0.3);
+  font-size: 12px;
+}
+
+/* Add Point Dialog */
+.add-point-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  background: #1e1e1e;
+  padding: 25px;
+  border-radius: 16px;
+  width: 300px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.add-point-dialog h3 {
+  margin: 0 0 15px 0;
+  color: #4CAF50;
+}
+
+.add-point-dialog input,
+.add-point-dialog select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2a2a2a;
+  color: white;
+  box-sizing: border-box;
+}
+
+.add-point-dialog .button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.add-point-dialog .button-group button {
+  flex: 1;
+  margin: 0;
+}
+
+/* Marker Popup Styling */
+.custom-popup {
+  min-width: 180px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.custom-popup strong {
+  font-size: 14px;
+  color: #ff9800;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.custom-popup .type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  margin: 5px 0;
+}
+
+.custom-popup .coordinates {
+  font-size: 10px;
+  color: #888;
+  margin: 5px 0;
+}
+
+.custom-popup .button-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.custom-popup .button-group button {
+  flex: 1;
+  padding: 6px;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Info Text */
+.info-text {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* 📱 MOBILE */
 @media (max-width: 600px) {
   .panel {
-    width: 90%;
-    left: 5%;
+    width: calc(100% - 20px);
+    left: 10px;
+    right: 10px;
     top: auto;
     bottom: 10px;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+  
+  .login-panel, .add-point-dialog {
+    width: calc(100% - 40px);
+  }
+  
+  .admin-badge {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
   }
 }
