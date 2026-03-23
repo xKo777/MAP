@@ -536,7 +536,7 @@ auth.onAuthStateChanged((user) => {
     
     if (user) {
         // Prüfe ob Admin (ändere die Email zu deiner Admin-Email!)
-        isAdmin = user.email === 'admin@example.com';
+        isAdmin = user.email === 'hellomello12853@gmail.com';
     } else {
         isAdmin = false;
     }
