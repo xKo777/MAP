@@ -24,10 +24,10 @@ let markerGroup = null; // Für dynamische Marker-Gruppe
 
 // Punkt-Typen mit Farben und Icons
 const pointTypes = {
-    'Sammler': { color: '#ff6b6b', icon: '💰', name: 'Sammler', emoji: '💰' },
-    'Verarbeiter': { color: '#4ecdc4', icon: '🏭', name: 'Verarbeiter', emoji: '🏭' },
-    'Anwesen': { color: '#45b7d1', icon: '🏠', name: 'Anwesen', emoji: '🏠' },
-    'Hersteller': { color: '#96ceb4', icon: '🔧', name: 'Hersteller', emoji: '🔧' }
+    'Sammler': { color: '#ff6b6b', icon: '🧺', name: 'Sammler', emoji: '🧺' },
+    'Verarbeiter': { color: '#4ecdc4', icon: '⚙️', name: 'Verarbeiter', emoji: '⚙️' },
+    'Anwesen': { color: '#45b7d1', icon: '🏰', name: 'Anwesen', emoji: '🏰' },
+    'Hersteller': { color: '#96ceb4', icon: '🔨', name: 'Hersteller', emoji: '🔨' }
 };
 
 // ============ KARTE MIT EIGENEM BILD INITIALISIEREN ============
