@@ -29,7 +29,7 @@ const pointTypes = {
     'Hersteller': { color: '#FF8C00', icon: '🔨', name: 'Hersteller', emoji: '🔨' },
     'Anwesen': { color: '#45b7d1', icon: '🏰', name: 'Anwesen', emoji: '🏰' },
     'Wichtig': { color: '#DC143C', icon: '📍', name: 'Wichtig', emoji: '📍' },
-    'Labor': { color: '#1B2838', icon: '🏪', name: 'Labor', emoji: '🏪' },
+    'Labor': { color: '#1B2838', icon: '🏪', name: 'Labor', emoji: '🏪' }
 };
 
 // ============ KARTE MIT EIGENEM BILD INITIALISIEREN ============
