@@ -494,7 +494,7 @@ function createUI() {
             `).join('')}
         </div>
         <div style="margin-bottom: 10px;">
-            <h4>📋 Punkte (${Object.keys(markers).length})</h4>
+            <h4>📋 Punkte</h4>
             <div id="pointList" style="max-height: 200px; overflow-y: auto;"></div>
         </div>
         <div class="legend">
