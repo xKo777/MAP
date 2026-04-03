@@ -24,10 +24,12 @@ let markerGroup = null; // Für dynamische Marker-Gruppe
 
 // Punkt-Typen mit Farben und Icons
 const pointTypes = {
-    'Sammler': { color: '#ff6b6b', icon: '🧺', name: 'Sammler', emoji: '🧺' },
-    'Verarbeiter': { color: '#4ecdc4', icon: '⚙️', name: 'Verarbeiter', emoji: '⚙️' },
+    'Sammler': { color: '#DAA520', icon: '🧺', name: 'Sammler', emoji: '🧺' },
+    'Verarbeiter': { color: '#8B008B', icon: '⚙️', name: 'Verarbeiter', emoji: '⚙️' },
+    'Hersteller': { color: '#FF8C00', icon: '🔨', name: 'Hersteller', emoji: '🔨' },
     'Anwesen': { color: '#45b7d1', icon: '🏰', name: 'Anwesen', emoji: '🏰' },
-    'Hersteller': { color: '#96ceb4', icon: '🔨', name: 'Hersteller', emoji: '🔨' }
+    'Wichtig': { color: '#DC143C', icon: '📍', name: 'Wichtig', emoji: '📍' },
+    'Labor': { color: '#1B2838', icon: '🏪', name: 'Labor', emoji: '🏪' },
 };
 
 // ============ KARTE MIT EIGENEM BILD INITIALISIEREN ============
@@ -254,7 +256,7 @@ function showAddPointDialog() {
     dialog.id = 'addPointDialog';
     dialog.className = 'add-point-dialog';
     dialog.innerHTML = `
-        <h3 style="margin: 0 0 15px 0; color: #4CAF50;">📍 Neuen Punkt erstellen</h3>
+        <h3 style="margin: 0 0 15px 0; color: #4CAF50;">Neuen Punkt erstellen</h3>
         <input type="text" id="pointName" placeholder="Name des Punktes (z.B. 'Geld-Lager Nord')" style="
             width: 100%;
             padding: 12px;
@@ -278,8 +280,10 @@ function showAddPointDialog() {
         ">
             <option value="Sammler">💰 Sammler</option>
             <option value="Verarbeiter">🏭 Verarbeiter</option>
-            <option value="Anwesen">🏠 Anwesen</option>
             <option value="Hersteller">🔧 Hersteller</option>
+            <option value="Anwesen">🏠 Anwesen</option>
+            <option value="Wichtig">📍 Wichtig</option>
+            <option value="Labor">🏪 Labor</option>
         </select>
         <div style="display: flex; gap: 10px; margin-top: 15px;">
             <button onclick="confirmAddPoint()" style="flex: 1; padding: 12px; background: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer;">✓ Hinzufügen</button>
