@@ -106,10 +106,10 @@ body {
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-.legend-color.sammler { background: #ff6b6b; }
-.legend-color.verarbeiter { background: #4ecdc4; }
+.legend-color.sammler { background: #DAA520; }
+.legend-color.verarbeiter { background: #8B008B; }
+.legend-color.hersteller { background: #FF8C00; }
 .legend-color.anwesen { background: #45b7d1; }
-.legend-color.hersteller { background: #96ceb4; }
 .legend-color.wichtig { background: #DC143C; }
 .legend-color.labor { background: #1B2838; }
 
