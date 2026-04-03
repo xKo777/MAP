@@ -35,8 +35,8 @@ const pointTypes = {
 // ============ KARTE MIT EIGENEM BILD INITIALISIEREN ============
 function initMap() {
     // Bild-Dimensionen deiner map.jpg (passe diese Werte an dein Bild an!)
-    const imageWidth = 1536;
-    const imageHeight = 2304;
+    const imageWidth = 3732;
+    const imageHeight = 5340;
     
     const southWest = L.latLng(0, 0);
     const northEast = L.latLng(imageHeight, imageWidth);
@@ -51,7 +51,7 @@ function initMap() {
     }).setView([imageHeight / 2, imageWidth / 2], 1);
     
     // Dein eigenes Kartenbild
-    L.imageOverlay('map.jpg', bounds, {
+    L.imageOverlay('map.png', bounds, {
         attribution: 'GTA V Map'
     }).addTo(map);
     
