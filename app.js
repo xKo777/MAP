@@ -51,7 +51,7 @@ function initMap() {
     }).setView([imageHeight / 2, imageWidth / 2], 1);
     
     // Dein eigenes Kartenbild
-    L.imageOverlay('map.png', bounds, {
+    L.imageOverlay('map.jpg', bounds, {
         attribution: 'GTA V Map'
     }).addTo(map);
     
