@@ -29,7 +29,8 @@ const pointTypes = {
     'Hersteller': { color: '#FF8C00', icon: '🔨', name: 'Hersteller', emoji: '🔨' },
     'Anwesen': { color: '#45b7d1', icon: '🏰', name: 'Anwesen', emoji: '🏰' },
     'Wichtig': { color: '#DC143C', icon: '📍', name: 'Wichtig', emoji: '📍' },
-    'Labor': { color: '#1B2838', icon: '🏪', name: 'Labor', emoji: '🏪' }
+    'Labor': { color: '#1B2838', icon: '🏪', name: 'Labor', emoji: '🏪' },
+    'Velvet Echo': { color: '#1B2838', icon: '💊', name: 'Velvet Echo', emoji: '💊' }
 };
 
 // ============ KARTE MIT EIGENEM BILD INITIALISIEREN ============
@@ -284,6 +285,7 @@ function showAddPointDialog() {
             <option value="Anwesen">🏠 Anwesen</option>
             <option value="Wichtig">📍 Wichtig</option>
             <option value="Labor">🏪 Labor</option>
+            <option value="Labor">💊 Velvet Echo</option>
         </select>
         <div style="display: flex; gap: 10px; margin-top: 15px;">
             <button onclick="confirmAddPoint()" style="flex: 1; padding: 12px; background: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer;">✓ Hinzufügen</button>
