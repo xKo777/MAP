@@ -285,7 +285,7 @@ function showAddPointDialog() {
             <option value="Anwesen">🏠 Anwesen</option>
             <option value="Wichtig">📍 Wichtig</option>
             <option value="Labor">🏪 Labor</option>
-            <option value="Labor">💊 Velvet Echo</option>
+            <option value="Velvet Echo">💊 Velvet Echo</option>
         </select>
         <div style="display: flex; gap: 10px; margin-top: 15px;">
             <button onclick="confirmAddPoint()" style="flex: 1; padding: 12px; background: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer;">✓ Hinzufügen</button>
