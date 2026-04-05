@@ -112,6 +112,7 @@ body {
 .legend-color.anwesen { background: #45b7d1; }
 .legend-color.wichtig { background: #DC143C; }
 .legend-color.labor { background: #1B2838; }
+.legend-color.velvet_echo { background: #ffc0cb; }
 
 /* Buttons */
 button {
