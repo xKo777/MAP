@@ -292,7 +292,7 @@ function showAddPointDialog() {
             <button onclick="cancelAddPoint()" style="flex: 1; padding: 12px; background: #3a3a3a; color: white; border: none; border-radius: 8px; cursor: pointer;">✗ Abbrechen</button>
         </div>
         <div class="info-text" style="margin-top: 12px; font-size: 11px; color: #aaa; text-align: center;">
-            💡 Tipp: Gib einen aussagekräftigen Namen ein
+            💡 Tipp: Gib einen aussagekräftigen Namen ein!
         </div>
     `;
     document.body.appendChild(dialog);
