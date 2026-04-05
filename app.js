@@ -35,8 +35,8 @@ const pointTypes = {
 // ============ KARTE MIT EIGENEM BILD INITIALISIEREN ============
 function initMap() {
     // Bild-Dimensionen deiner map.jpg (passe diese Werte an dein Bild an!)
-    const imageWidth = 3732;
-    const imageHeight = 5340;
+    const imageWidth = 1536;
+    const imageHeight = 2304;
     
     const southWest = L.latLng(0, 0);
     const northEast = L.latLng(imageHeight, imageWidth);
